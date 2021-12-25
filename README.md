@@ -8,7 +8,7 @@ Make sure to remove or move your current `nvim` directory
 
 **IMPORTANT** requires `Neovim 0.6 release` version
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/a2n-s/neovim.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
