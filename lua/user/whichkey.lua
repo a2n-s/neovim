@@ -18,6 +18,7 @@
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
+  vim.notify("Could not load properly 'which-key' inside 'whichkey.lua'")
   return
 end
 

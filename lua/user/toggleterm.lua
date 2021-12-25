@@ -18,6 +18,7 @@
 
 local status_ok, toggleterm = pcall(require, "toggleterm")
 if not status_ok then
+  vim.notify("Could not load properly 'toggleterm' inside 'toggleterm.lua'")
 	return
 end
 

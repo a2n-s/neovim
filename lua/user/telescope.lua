@@ -18,6 +18,7 @@
 
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
+  vim.notify("Could not load properly 'telescope' inside 'telescope.lua'")
   return
 end
 

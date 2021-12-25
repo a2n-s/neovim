@@ -18,6 +18,7 @@
 
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
+  vim.notify("Could not load properly 'bufferline' inside 'bufferline.lua'")
   return
 end
 

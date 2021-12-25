@@ -18,6 +18,7 @@
 
 local status_ok, comment = pcall(require, "Comment")
 if not status_ok then
+  vim.notify("Could not load properly 'Comment' inside 'comment.lua'")
   return
 end
 

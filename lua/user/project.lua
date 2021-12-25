@@ -18,6 +18,7 @@
 
 local status_ok, project = pcall(require, "project_nvim")
 if not status_ok then
+  vim.notify("Could not load properly 'project_nvim' inside 'project.lua'")
 	return
 end
 project.setup({
@@ -60,6 +61,7 @@ project.setup({
 
 local tele_status_ok, telescope = pcall(require, "telescope")
 if not tele_status_ok then
+  vim.notify("Could not load properly 'telescope' inside 'project.lua'")
 	return
 end
 

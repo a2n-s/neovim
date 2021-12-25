@@ -18,9 +18,10 @@
 
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
+  vim.notify("Could not load properly 'lspconfig' inside 'lsp/init.lua'")
   return
 end
 
-require "user.lsp.lsp-installer"
+require("user.lsp.lsp-installer")
 require("user.lsp.handlers").setup()
-require "user.lsp.null-ls"
+require("user.lsp.null-ls")
