@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/ / / /_/ / / / / /_/ /   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__,_/_/ .___/_/ /_/\__,_/   (_)  /_/\__,_/\__,_/
 --                                                                                  /_/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  a neovim greeter that display useful stuff on the start screen.
+--               see https://github.com/goolord/alpha-nvim
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
@@ -32,28 +33,26 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
+	dashboard.button("f", "  Find file",           ":Telescope find_files <CR>"),
+	dashboard.button("e", "  New file",            ":ene <BAR> startinsert <CR>"),
+	dashboard.button("p", "  Find project",        ":Telescope projects <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
-	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+	dashboard.button("t", "  Find text",           ":Telescope live_grep <CR>"),
+	dashboard.button("c", "  Configuration",       ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("q", "  Quit Neovim",         ":qa<CR>"),
 }
 
 local function footer()
 -- NOTE: requires the fortune-mod package to work
-	-- local handle = io.popen("fortune")
-	-- local fortune = handle:read("*a")
-	-- handle:close()
-	-- return fortune
-	return "chrisatmachine.com"
+	local handle = io.popen("fortune")
+	local fortune = handle:read("*a")
+	handle:close()
+	return fortune
 end
-
 dashboard.section.footer.val = footer()
 
-dashboard.section.footer.opts.hl = "Type"
-dashboard.section.header.opts.hl = "Include"
+dashboard.section.footer.opts.hl  = "Type"
+dashboard.section.header.opts.hl  = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true

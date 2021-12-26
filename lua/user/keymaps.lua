@@ -46,7 +46,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "o", "o<Esc>", opts)  -- below.
 keymap("n", "O", "O<Esc>", opts)  -- above.
 -- leader maps.
-keymap("n", "<leader>e", ":Lex 30<CR>",                          opts)  -- open and close the explorer window.
+-- keymap("n", "<leader>e", ":Lex 30<CR>",                          opts)  -- open and close the explorer window.
 keymap("n", "<leader>s", ":luafile $MYVIMRC<CR>:luafile %<CR>",  opts)  -- sources the config.
 keymap("n", "<leader>c", ":nohlsearch<CR>",               opts)  -- clears the highlight.
 -- Resize with ctrl+arrows.

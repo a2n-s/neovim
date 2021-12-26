@@ -94,6 +94,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring" -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring |
   use "windwp/nvim-autopairs"                       -- https://github.com/windwp/nvim-autopairs                       | Autopairs, integrates with both cmp and treesitter
   use "lewis6991/gitsigns.nvim"                     -- https://github.com/lewis6991/gitsigns.nvim                     |
+  use "kdheepak/lazygit.nvim"                       -- https://github.com/kdheepak/lazygit.nvim                       |
   use "numToStr/Comment.nvim"                       -- https://github.com/numToStr/Comment.nvim                       | Easily comment stuff
   use "kyazdani42/nvim-tree.lua"                    -- https://github.com/kyazdani42/nvim-tree.lua                    |
   use "akinsho/bufferline.nvim"                     -- https://github.com/akinsho/bufferline.nvim                     |

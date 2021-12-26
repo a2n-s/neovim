@@ -9,8 +9,8 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/ / /_/ / /_/ /_/ / /__/ /_/ / / / / / / / / / / / /_/ / / / / /_/ (__  )   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__,_/\__,_/\__/\____/\___/\____/_/ /_/ /_/_/ /_/ /_/\__,_/_/ /_/\__,_/____/   (_)  /_/\__,_/\__,_/
 --
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  some autocommands that launches when certain events occur nin neovim.
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
