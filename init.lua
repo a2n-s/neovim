@@ -29,11 +29,11 @@ require "user.comment"          -- https://github.com/lewis6991/gitsigns.nvim
 require "user.gitsigns"         -- https://github.com/numToStr/Comment.nvim
 require "user.nvim-tree"        -- https://github.com/kyazdani42/nvim-tree.lua
 require "user.bufferline"       -- https://github.com/akinsho/bufferline.nvim
--- require "user.lualine"          -- https://github.com/nvim-lualine/lualine.nvim
--- require "user.toggleterm"       -- https://github.com/akinsho/toggleterm.nvim
--- require "user.project"          -- https://github.com/ahmedkhalf/project.nvim
--- require "user.impatient"        -- https://github.com/lewis6991/impatient.nvim
--- require "user.indentline"       -- https://github.com/lukas-reineke/indent-blankline.nvim
--- require "user.alpha"            -- https://github.com/goolord/alpha-nvim
--- require "user.whichkey"         -- https://github.com/folke/which-key.nvim
--- require "user.autocommands"
+require "user.lualine"          -- https://github.com/nvim-lualine/lualine.nvim
+require "user.toggleterm"       -- https://github.com/akinsho/toggleterm.nvim
+require "user.project"          -- https://github.com/ahmedkhalf/project.nvim
+require "user.impatient"        -- https://github.com/lewis6991/impatient.nvim
+require "user.indentline"       -- https://github.com/lukas-reineke/indent-blankline.nvim
+require "user.alpha"            -- https://github.com/goolord/alpha-nvim
+require "user.whichkey"         -- https://github.com/folke/which-key.nvim
+require "user.autocommands"
