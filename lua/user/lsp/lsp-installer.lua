@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / (__  ) /_/ /  _/_/    / (__  ) /_/ /  /_____/   / / / / (__  ) /_/ /_/ / / /  __/ /      _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/     /_/____/ .___/  /_/     /_/____/ .___/            /_/_/ /_/____/\__/\__,_/_/_/\___/_/      (_)  /_/\__,_/\__,_/
 --                                                                                 /_/                     /_/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  takes care of the loading of general lsp config and per-server config, see
+--               https://github.com/neovim/nvim-lspconfig#readme
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine

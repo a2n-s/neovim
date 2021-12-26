@@ -9,8 +9,8 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / (__  ) /_/ /  _/_/    (__  )  __/ /_/ /_/ / / / / /_/ (__  )  _/_/     (__  ) /_/ / / / / / / / / /  __/ ,< / /_/ /           / / /_/ / /_/ /   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/     /_/____/ .___/  /_/     /____/\___/\__/\__/_/_/ /_/\__, /____/  /_/      /____/\__,_/_/ /_/ /_/_/ /_/\___/_/|_|\____/  ______   /_/\__,_/\__,_/   (_)  /_/\__,_/\__,_/
 --                                                                                 /_/                                         /____/                                                              /_____/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  settings for lua lsp completion.
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine

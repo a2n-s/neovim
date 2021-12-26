@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / (__  ) /_/ /  _/_/    / / / / /_/ / / / / /_/ / /  __/ /  (__  )   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/     /_/____/ .___/  /_/     /_/ /_/\__,_/_/ /_/\__,_/_/\___/_/  /____/   (_)  /_/\__,_/\__,_/
 --                                                                                 /_/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  defines a handler for all lsp configurations, see
+--               https://github.com/neovim/nvim-lspconfig#readme
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
@@ -18,13 +19,12 @@
 
 local M = {}
 
--- TODO: backfill this to template
 M.setup = function()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
+    { name = "DiagnosticSignWarn",  text = "" },
+    { name = "DiagnosticSignHint",  text = "" },
+    { name = "DiagnosticSignInfo",  text = "" },
   }
 
   for _, sign in ipairs(signs) do
@@ -43,11 +43,11 @@ M.setup = function()
     severity_sort = true,
     float = {
       focusable = false,
-      style = "minimal",
-      border = "rounded",
-      source = "always",
-      header = "",
-      prefix = "",
+      style     = "minimal",
+      border    = "rounded",
+      source    = "always",
+      header    = "",
+      prefix    = "",
     },
   }
 
@@ -78,27 +78,22 @@ local function lsp_highlight_document(client)
   end
 end
 
+local keymap = vim.api.nvim_buf_set_keymap
 local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-  vim.api.nvim_buf_set_keymap(
-    bufnr,
-    "n",
-    "gl",
-    '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>',
-    opts
-  )
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+  keymap(bufnr, "n", "gD",         "<cmd>lua vim.lsp.buf.declaration()<CR>",                                        opts)
+  keymap(bufnr, "n", "gd",         "<cmd>lua vim.lsp.buf.definition()<CR>",                                         opts)
+  keymap(bufnr, "n", "K",          "<cmd>lua vim.lsp.buf.hover()<CR>",                                              opts)
+  keymap(bufnr, "n", "gi",         "<cmd>lua vim.lsp.buf.implementation()<CR>",                                     opts)
+  keymap(bufnr, "n", "<C-k>",      "<cmd>lua vim.lsp.buf.signature_help()<CR>",                                     opts)
+  keymap(bufnr, "n", "gr",         "<cmd>lua vim.lsp.buf.references()<CR>",                                         opts)
+  keymap(bufnr, "n", "gl",         '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
+  keymap(bufnr, "n", "[d",         '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>',                 opts)
+  keymap(bufnr, "n", "]d",         '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>',                 opts)
+  keymap(bufnr, "n", "<leader>q",  "<cmd>lua vim.diagnostic.setloclist()<CR>",                                      opts)
+  keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>",                                        opts)
+  keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>",                                             opts)
+  keymap(bufnr, "n", "<leader>f",  "<cmd>lua vim.diagnostic.open_float()<CR>",                                      opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
