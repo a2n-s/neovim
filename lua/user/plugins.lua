@@ -90,7 +90,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-media-files.nvim"   -- https://github.com/nvim-telescope/telescope-media-files.nvim   |
   -- treesitter
   use {
-    "nvim-treesitter/nvim-treesitter",              -- https://github.com/JoosepAlviste/nvim-treesitter               |
+    "nvim-treesitter/nvim-treesitter",              -- https://github.com/nvim-treesitter/nvim-treesitter             |
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring" -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring |

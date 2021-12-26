@@ -9,8 +9,8 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/ /  /  __/  __(__  ) / /_/ /_/  __/ /      _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__/_/   \___/\___/____/_/\__/\__/\___/_/      (_)  /_/\__,_/\__,_/
 --
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  treesitter for better highlight.
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine

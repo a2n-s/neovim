@@ -9,8 +9,8 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/  __/ /  __(__  ) /__/ /_/ / /_/ /  __/   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__/\___/_/\___/____/\___/\____/ .___/\___/   (_)  /_/\__,_/\__,_/
 --                                                                                                          /_/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  telescope configuration.
+-- Dependencies: telescope media files.
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
@@ -35,66 +35,52 @@ telescope.setup {
 
     mappings = {
       i = {
-        ["<C-n>"] = actions.cycle_history_next,
-        ["<C-p>"] = actions.cycle_history_prev,
-
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-
-        ["<C-c>"] = actions.close,
-
-        ["<Down>"] = actions.move_selection_next,
-        ["<Up>"] = actions.move_selection_previous,
-
-        ["<CR>"] = actions.select_default,
-        ["<C-x>"] = actions.select_horizontal,
-        ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
-
-        ["<C-u>"] = actions.preview_scrolling_up,
-        ["<C-d>"] = actions.preview_scrolling_down,
-
-        ["<PageUp>"] = actions.results_scrolling_up,
+        ["<C-n>"]      = actions.cycle_history_next,
+        ["<C-p>"]      = actions.cycle_history_prev,
+        ["<C-j>"]      = actions.move_selection_next,
+        ["<C-k>"]      = actions.move_selection_previous,
+        ["<C-c>"]      = actions.close,
+        ["<Down>"]     = actions.move_selection_next,
+        ["<Up>"]       = actions.move_selection_previous,
+        ["<CR>"]       = actions.select_default,
+        ["<C-x>"]      = actions.select_horizontal,
+        ["<C-v>"]      = actions.select_vertical,
+        ["<C-t>"]      = actions.select_tab,
+        ["<C-u>"]      = actions.preview_scrolling_up,
+        ["<C-d>"]      = actions.preview_scrolling_down,
+        ["<PageUp>"]   = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
-
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-        ["<C-l>"] = actions.complete_tag,
-        ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+        ["<Tab>"]      = actions.toggle_selection + actions.move_selection_worse,
+        ["<S-Tab>"]    = actions.toggle_selection + actions.move_selection_better,
+        ["<C-q>"]      = actions.send_to_qflist + actions.open_qflist,
+        ["<M-q>"]      = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<C-l>"]      = actions.complete_tag,
+        ["<C-_>"]      = actions.which_key, -- keys from pressing <C-/>
       },
-
       n = {
-        ["<esc>"] = actions.close,
-        ["<CR>"] = actions.select_default,
-        ["<C-x>"] = actions.select_horizontal,
-        ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
-
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-
-        ["j"] = actions.move_selection_next,
-        ["k"] = actions.move_selection_previous,
-        ["H"] = actions.move_to_top,
-        ["M"] = actions.move_to_middle,
-        ["L"] = actions.move_to_bottom,
-
-        ["<Down>"] = actions.move_selection_next,
-        ["<Up>"] = actions.move_selection_previous,
-        ["gg"] = actions.move_to_top,
-        ["G"] = actions.move_to_bottom,
-
-        ["<C-u>"] = actions.preview_scrolling_up,
-        ["<C-d>"] = actions.preview_scrolling_down,
-
-        ["<PageUp>"] = actions.results_scrolling_up,
+        ["<esc>"]      = actions.close,
+        ["<CR>"]       = actions.select_default,
+        ["<C-x>"]      = actions.select_horizontal,
+        ["<C-v>"]      = actions.select_vertical,
+        ["<C-t>"]      = actions.select_tab,
+        ["<Tab>"]      = actions.toggle_selection + actions.move_selection_worse,
+        ["<S-Tab>"]    = actions.toggle_selection + actions.move_selection_better,
+        ["<C-q>"]      = actions.send_to_qflist + actions.open_qflist,
+        ["<M-q>"]      = actions.send_selected_to_qflist + actions.open_qflist,
+        ["j"]          = actions.move_selection_next,
+        ["k"]          = actions.move_selection_previous,
+        ["H"]          = actions.move_to_top,
+        ["M"]          = actions.move_to_middle,
+        ["L"]          = actions.move_to_bottom,
+        ["<Down>"]     = actions.move_selection_next,
+        ["<Up>"]       = actions.move_selection_previous,
+        ["gg"]         = actions.move_to_top,
+        ["G"]          = actions.move_to_bottom,
+        ["<C-u>"]      = actions.preview_scrolling_up,
+        ["<C-d>"]      = actions.preview_scrolling_down,
+        ["<PageUp>"]   = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
-
-        ["?"] = actions.which_key,
+        ["?"]          = actions.which_key,
       },
     },
   },
