@@ -84,33 +84,31 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"                       -- https://github.com/neovim/nvim-lspconfig                       | enable LSP
   use "williamboman/nvim-lsp-installer"             -- https://github.com/williamboman/nvim-lsp-installer             | simple to use language server installer
   use "tamago324/nlsp-settings.nvim"                -- https://github.com/tamago324/nlsp-settings.nvim                | language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim"             -- https://github.com/jose-elias-alvarez/null-ls.nvim             | for formatters and linters
-  -- telescope
-  use "nvim-telescope/telescope.nvim"               -- https://github.com/nvim-telescope/telescope.nvim               |
+  -- next sections are relative to branches of the original LunarVim template config.
+  use "nvim-telescope/telescope.nvim"               -- https://github.com/nvim-telescope/telescope.nvim               | powerfull explorer
   use "nvim-telescope/telescope-media-files.nvim"   -- https://github.com/nvim-telescope/telescope-media-files.nvim   |
-  -- treesitter
   use {
-    "nvim-treesitter/nvim-treesitter",              -- https://github.com/nvim-treesitter/nvim-treesitter             |
+    "nvim-treesitter/nvim-treesitter",              -- https://github.com/nvim-treesitter/nvim-treesitter             | better highlighting
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring" -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring |
-  -- git
-  use "lewis6991/gitsigns.nvim"                                                                                                                               -- https://github.com/lewis6991/gitsigns.nvim
-  -- other plugins
   use "windwp/nvim-autopairs"                       -- https://github.com/windwp/nvim-autopairs                       | Autopairs, integrates with both cmp and treesitter
+  use "lewis6991/gitsigns.nvim"                     -- https://github.com/lewis6991/gitsigns.nvim                     |
   use "numToStr/Comment.nvim"                       -- https://github.com/numToStr/Comment.nvim                       | Easily comment stuff
-  use "kyazdani42/nvim-web-devicons"                -- https://github.com/kyazdani42/nvim-web-devicons                |
   use "kyazdani42/nvim-tree.lua"                    -- https://github.com/kyazdani42/nvim-tree.lua                    |
   use "akinsho/bufferline.nvim"                     -- https://github.com/akinsho/bufferline.nvim                     |
-  use "moll/vim-bbye"                               -- https://github.com/moll/vim-bbye                               |
+  use "jose-elias-alvarez/null-ls.nvim"             -- https://github.com/jose-elias-alvarez/null-ls.nvim             | for formatters and linters
   use "nvim-lualine/lualine.nvim"                   -- https://github.com/nvim-lualine/lualine.nvim                   |
   use "akinsho/toggleterm.nvim"                     -- https://github.com/akinsho/toggleterm.nvim                     |
   use "ahmedkhalf/project.nvim"                     -- https://github.com/ahmedkhalf/project.nvim                     |
   use "lewis6991/impatient.nvim"                    -- https://github.com/lewis6991/impatient.nvim                    |
   use "lukas-reineke/indent-blankline.nvim"         -- https://github.com/lukas-reineke/indent-blankline.nvim         |
   use "goolord/alpha-nvim"                          -- https://github.com/goolord/alpha-nvim                          |
-  use "antoinemadec/FixCursorHold.nvim"             -- https://github.com/antoinemadec/FixCursorHold.nvim             | This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"                        -- https://github.com/folke/which-key.nvim                        |
+  -- other plugins
+  use "kyazdani42/nvim-web-devicons"                -- https://github.com/kyazdani42/nvim-web-devicons                |
+  use "moll/vim-bbye"                               -- https://github.com/moll/vim-bbye                               |
+  use "antoinemadec/FixCursorHold.nvim"             -- https://github.com/antoinemadec/FixCursorHold.nvim             | This is needed to fix lsp doc highlight
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
