@@ -9,8 +9,8 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /__/ / / / / / /_/ /   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \___/_/ /_/ /_/ .___/   (_)  /_/\__,_/\__,_/
 --                                                                                         /_/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  loads and configure the high lever management of the autocompletion in neovim.
+-- Dependencies: completion related plugins, see plugins.lua for a list of plugins.
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
@@ -29,6 +29,18 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
+-- add completion for the command line of neovim.
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = 'cmdline' }
+  }
+})
+-- add completion for the search of neovim.
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1

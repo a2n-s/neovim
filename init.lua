@@ -9,8 +9,8 @@
 --      / / / / / / /_    _    / / /_/ / /_/ /
 --     /_/_/ /_/_/\__/   (_)  /_/\__,_/\__,_/
 --
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  simply loads all lua files needed by my neovim config.
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine

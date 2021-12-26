@@ -9,8 +9,8 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /__/ /_/ / / /_/ / /  (__  ) /__/ / / /  __/ / / / / /  __/   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \___/\____/_/\____/_/  /____/\___/_/ /_/\___/_/ /_/ /_/\___/   (_)  /_/\__,_/\__,_/
 --
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  loads a colorscheme or fallback to the default of neovim when not found.
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
