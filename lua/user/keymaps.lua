@@ -45,10 +45,10 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- do not go into insert more when creating line above or below.
 keymap("n", "o", "o<Esc>", opts)  -- below.
 keymap("n", "O", "O<Esc>", opts)  -- above.
--- leader maps.
+-- -- leader maps.
+-- keymap("n", "<leader>s", ":luafile $MYVIMRC<CR>:luafile %<CR>",  opts)  -- sources the config.
 -- keymap("n", "<leader>e", ":Lex 30<CR>",                          opts)  -- open and close the explorer window.
-keymap("n", "<leader>s", ":luafile $MYVIMRC<CR>:luafile %<CR>",  opts)  -- sources the config.
-keymap("n", "<leader>c", ":nohlsearch<CR>",               opts)  -- clears the highlight.
+-- keymap("n", "<leader>c", ":nohlsearch<CR>",               opts)  -- clears the highlight.
 -- Resize with ctrl+arrows.
 keymap("n", "<C-Up>",    ":resize -2<CR>",          opts)
 keymap("n", "<C-Down>",  ":resize +2<CR>",          opts)
