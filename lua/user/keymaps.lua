@@ -18,7 +18,7 @@
 
 -- options for the keymaps.
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+local term_opts = { noremap = true, silent = true }
 
 -- Shorten function name.
 local keymap = vim.api.nvim_set_keymap
@@ -80,9 +80,5 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
--- Better terminal navigation with control+vim keys.
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
+-- disable the escape key in terminal mode as it conflicts with features from terminal apps.
+keymap("t", "<Esc>", "<Nop>", term_opts)
