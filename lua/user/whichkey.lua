@@ -80,8 +80,7 @@ local setup = {
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>",
              "call",     "lua",   "^:",    "^ " }, -- hide mapping boilerplate
   show_help = true,                                -- show help message on the command line when the popup is visible
-  triggers = "auto",                               -- automatically setup triggers
-  -- triggers = {"<leader>"} -- or specify a list manually
+  triggers = "auto",                               -- automatically setup triggers, might be {"<leader>"} or specify a list manually
   triggers_blacklist = {
     -- list of mode / prefixes that should never be hooked by WhichKey
     -- this is mostly relevant for key maps that start with a native binding
@@ -109,6 +108,8 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>",                                               "Explorer"                           },
   ["w"] = { "<cmd>w!<CR>",                                                               "Save"                           },
   ["q"] = { "<cmd>q<CR>",                                                                "Quit"                           },
+  ["W"] = { "<cmd>wa!<CR>",                                                          "Save All"                           },
+  ["Q"] = { "<cmd>qa<CR>",                                                           "Quit All"                           },
   ["c"] = { "<cmd>Bdelete!<CR>",                                                 "Close Buffer"                           },
   ["h"] = { "<cmd>nohlsearch<CR>",                                               "No Highlight"                           },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>",                               "Find Text"                           },
