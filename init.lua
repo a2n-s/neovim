@@ -37,3 +37,5 @@ require "user.indentline"       -- https://github.com/lukas-reineke/indent-blank
 require "user.alpha"            -- https://github.com/goolord/alpha-nvim
 require "user.whichkey"         -- https://github.com/folke/which-key.nvim
 require "user.autocommands"
+
+require "user.venn"             -- https://github.com/jbyuki/venn.nvim

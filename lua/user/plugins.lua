@@ -178,8 +178,7 @@ return packer.startup(function(use)
 -- Terminal integration
   -- use "LoricAndre/OneTerm.nvim"                     -- https://github.com/LoricAndre/OneTerm.nvim                     | Plugin framework for running commands in the terminal.
   -- use "nikvdp/neomux"                               -- https://github.com/nikvdp/neomux                               | Control Neovim from shells running inside Neovim.
-     use "akinsho/toggleterm.nvim"                     -- https://github.com/akinsho/toggleterm.nvim                    *|
-  -- use "akinsho/nvim-toggleterm.lua"                 -- https://github.com/akinsho/nvim-toggleterm.lua                 | A Neovim Lua plugin to help easily manage multiple terminal windows.
+     use "akinsho/toggleterm.nvim"                     -- https://github.com/akinsho/toggleterm.nvim                     | A Neovim Lua plugin to help easily manage multiple terminal windows.
   -- use "norcalli/nvim-terminal.lua"                  -- https://github.com/norcalli/nvim-terminal.lua                  | A high performance filetype mode for Neovim which leverages conceal and highlights your buffer with the correct color codes.
   -- use "numToStr/FTerm.nvim"                         -- https://github.com/numToStr/FTerm.nvim                         | No nonsense floating terminal written in Lua.
   -- use "oberblastmeister/termwrapper.nvim"           -- https://github.com/oberblastmeister/termwrapper.nvim           | Wrapper for Neovim's terminal features to make them more user friendly.
@@ -210,11 +209,11 @@ return packer.startup(function(use)
   -- use "mini.fuzzy"                                  -- https://github.com/echasnovski/mini.nvim#minifuzzy             | Module of <a href="https://github.com/echasnovski/mini.nvim">echasnovski/mini.nvim</a> with functions to perform fuzzy matching of one string to others along with fast Telescope sorter.
 -- Note Taking
   -- use "oberblastmeister/neuron.nvim"                -- https://github.com/oberblastmeister/neuron.nvim                | Note taking plugin for neuron that integrates with telescope.nvim.
-  -- use "jbyuki/nabla.nvim"                           -- https://github.com/jbyuki/nabla.nvim                           | Take your scientific notes in Neovim.
+     use "jbyuki/nabla.nvim"                           -- https://github.com/jbyuki/nabla.nvim                           | Take your scientific notes in Neovim.
   -- use "nvim-neorg/neorg"                            -- https://github.com/nvim-neorg/neorg                            | Modernity meets insane extensibility. The future of organizing your life in Neovim.
   -- use "nvim-orgmode/orgmode"                        -- https://github.com/nvim-orgmode/orgmode                        | Orgmode clone written in Lua for Neovim 0.5+.
   -- use "NFrid/due.nvim"                              -- https://github.com/NFrid/due.nvim                              | Displays due for a date string as a virtual text.
-  -- use "jbyuki/venn.nvim"                            -- https://github.com/jbyuki/venn.nvim                            | Draw ASCII diagrams in Neovim.
+     use "jbyuki/venn.nvim"                            -- https://github.com/jbyuki/venn.nvim                            | Draw ASCII diagrams in Neovim.
   -- use "stevearc/gkeep.nvim"                         -- https://github.com/stevearc/gkeep.nvim                         | Google Keep integration for Neovim.
 -- Color
   -- use "norcalli/nvim-colorizer.lua"                 -- https://github.com/norcalli/nvim-colorizer.lua                 | A high-performance color highlighter for Neovim which has no external dependencies!.
@@ -240,7 +239,7 @@ return packer.startup(function(use)
   -- use "bluz71/vim-nightfly-guicolors"               -- https://github.com/bluz71/vim-nightfly-guicolors               | Nightfly is a dark GUI color scheme heavily inspired by Sarah Drasner's Night Owl theme.
   -- use "bluz71/vim-moonfly-colors"                   -- https://github.com/bluz71/vim-moonfly-colors                   | Moonfly is a dark color scheme with Tree-sitter support.
   -- use "ChristianChiarulli/nvcode-color-schemes.vim" -- https://github.com/ChristianChiarulli/nvcode-color-schemes.vim | Nvcode, onedark, nord colorschemes with Tree-sitter support.
-  -- use "folke/tokyonight.nvim"                       -- https://github.com/folke/tokyonight.nvim                       | A clean, dark and light Neovim theme written in Lua, with support for LSP, Tree-sitter and lots of plugins.
+     use "folke/tokyonight.nvim"                       -- https://github.com/folke/tokyonight.nvim                       | A clean, dark and light Neovim theme written in Lua, with support for LSP, Tree-sitter and lots of plugins.
   -- use "sainnhe/sonokai"                             -- https://github.com/sainnhe/sonokai                             | High Contrast                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            amp; Vivid Color Scheme based on Monokai Pro.
   -- use "kyazdani42/blue-moon"                        -- https://github.com/kyazdani42/blue-moon                        | A dark color scheme for Neovim derived from palenight and carbonight.
   -- use "mhartington/oceanic-next"                    -- https://github.com/mhartington/oceanic-next                    | Oceanic Next theme for Neovim.

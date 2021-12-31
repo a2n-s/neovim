@@ -56,9 +56,9 @@ keymap("n", "<C-Left>",  ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers with shift+h/l
 keymap("n", "<S-l>",   ":bnext<CR>",                opts)
-keymap("n", "<C-S-l>", ":BufferLineMoveNext<CR>",   opts)
+-- keymap("n", "<C-S-l>", ":BufferLineMoveNext<CR>",   opts)
 keymap("n", "<S-h>",   ":bprevious<CR>",            opts)
-keymap("n", "<C-S-h>", ":BufferLineMovePrev<CR>",   opts)
+-- keymap("n", "<C-S-h>", ":BufferLineMovePrev<CR>",   opts)
 
 -- Insert --
 -- Press jk fast to quit insert mode.
