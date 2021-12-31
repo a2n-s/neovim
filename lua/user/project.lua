@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/ / /  / /_/ / / /  __/ /__/ /_    _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/     / .___/_/   \____/_/ /\___/\___/\__/   (_)  /_/\__,_/\__,_/
 --                                                                          /_/              /___/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  Superior project management.
+--               see https://github.com/ahmedkhalf/project.nvim
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine

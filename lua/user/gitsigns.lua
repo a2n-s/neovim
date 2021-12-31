@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/ / / /_(__  ) / /_/ / / / (__  )   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__, /_/\__/____/_/\__, /_/ /_/____/   (_)  /_/\__,_/\__,_/
 --                                                                           /____/             /____/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  Super fast git decorations for neovim, implemented in lua.
+--               see https://github.com/lewis6991/gitsigns.nvim
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
@@ -24,42 +25,42 @@ end
 
 gitsigns.setup {
   signs = {
-    add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-    change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-    delete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-    topdelete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-    changedelete = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+    add          = { hl = "GitSignsAdd",    text = "▎",  numhl = "GitSignsAddNr",    linehl = "GitSignsAddLn" },
+    change       = { hl = "GitSignsChange", text = "▎",  numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+    delete       = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+    topdelete    = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+    changedelete = { hl = "GitSignsChange", text = "▎",  numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
   },
-  signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-  numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
-  linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
-  word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
+  signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+  numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+  linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+  word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
   watch_gitdir = {
-    interval = 1000,
+    interval     = 1000,
     follow_files = true,
   },
   attach_to_untracked = true,
-  current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+  current_line_blame  = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
-    virt_text = true,
-    virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
-    delay = 1000,
+    virt_text         = true,
+    virt_text_pos     = "eol", -- 'eol' | 'overlay' | 'right_align'
+    delay             = 1000,
     ignore_whitespace = false,
   },
   current_line_blame_formatter_opts = {
     relative_time = false,
   },
-  sign_priority = 6,
-  update_debounce = 100,
+  sign_priority    = 6,
+  update_debounce  = 100,
   status_formatter = nil, -- Use default
-  max_file_length = 40000,
-  preview_config = {
+  max_file_length  = 40000,
+  preview_config   = {
     -- Options passed to nvim_open_win
-    border = "single",
-    style = "minimal",
+    border   = "single",
+    style    = "minimal",
     relative = "cursor",
-    row = 0,
-    col = 1,
+    row      = 0,
+    col      = 1,
   },
   yadm = {
     enable = false,

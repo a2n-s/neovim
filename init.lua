@@ -25,8 +25,8 @@ require "user.lsp"              -- https://github.com/neovim/nvim-lspconfig
 require "user.telescope"        -- https://github.com/nvim-telescope/telescope.nvim
 require "user.treesitter"       -- https://github.com/nvim-treesitter/nvim-treesitter
 require "user.autopairs"        -- https://github.com/windwp/nvim-autopairs
-require "user.comment"          -- https://github.com/lewis6991/gitsigns.nvim
-require "user.gitsigns"         -- https://github.com/numToStr/Comment.nvim
+require "user.comment"          -- https://github.com/numToStr/Comment.nvim
+require "user.gitsigns"         -- https://github.com/lewis6991/gitsigns.nvim
 require "user.nvim-tree"        -- https://github.com/kyazdani42/nvim-tree.lua
 require "user.bufferline"       -- https://github.com/akinsho/bufferline.nvim
 require "user.lualine"          -- https://github.com/nvim-lualine/lualine.nvim

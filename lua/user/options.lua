@@ -20,7 +20,7 @@
 local options = {
   -- visual options to make basic things look pretty.
   showcmd        = true,                      -- show partial commands in the command lines when typing key strokes.
-  cmdheight      = 2,                         -- more space in the neovim command line for displaying messages.
+  cmdheight      = 1,                         -- more space in the neovim command line for displaying messages.
   pumheight      = 10,                        -- pop up maximum menu height.
   showmode       = false,                     -- to see things like -- INSERT --.
   showtabline    = 2,                         -- always show tabs.

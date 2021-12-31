@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /__/ /_/ / / / / / / / / / / /  __/ / / / /_    _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \___/\____/_/ /_/ /_/_/ /_/ /_/\___/_/ /_/\__/   (_)  /_/\__,_/\__,_/
 --
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  Allow to comment automatically lines with one key stroke or combination.
+--               see https://github.com/numToStr/Comment.nvim
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
