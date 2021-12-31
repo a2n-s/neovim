@@ -39,7 +39,9 @@ require "user.whichkey"         -- https://github.com/folke/which-key.nvim
 require "user.autocommands"
 
 require "user.venn"             -- https://github.com/jbyuki/venn.nvim
-require "user.notify"           -- https://github.com/rcarriga/nvim-notify
 
+require "user.notify"           -- https://github.com/rcarriga/nvim-notify
 require "user.notify.recovery"
 require "user.notify.async"
+
+require "user.cheatsheet"       -- https://github.com/sudormrfbin/cheatsheet.nvim

@@ -115,6 +115,7 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>",                               "Find Text"                           },
   ["P"] = { "<cmd>Telescope projects<cr>",                                           "Projects"                           },
   ["S"] = { "<cmd>luafile $MYVIMRC<cr>:luafile %<cr>",                      "Source the config"                           },
+  ["?"] = { "<cmd>Cheatsheet<cr>",                                                       "Help"                           },
   N = { name =                                                                          "Nabla",
     a = { "<cmd>lua require('nabla').action()<cr>",                                             "Action"                  },
     p = { "<cmd>lua require('nabla').popup()<cr>",                                              "Popup"                   },

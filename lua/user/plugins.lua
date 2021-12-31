@@ -304,7 +304,7 @@ return packer.startup(function(use)
   -- use "jghauser/mkdir.nvim"                         -- https://github.com/jghauser/mkdir.nvim                         | Automatically create missing directories when saving files.
   -- use "matbme/JABS.nvim"                            -- https://github.com/matbme/JABS.nvim                            | Pretty and minimal buffer switcher window.
   -- use "clojure-vim/jazz.nvim"                       -- https://github.com/clojure-vim/jazz.nvim                       | Acid + Impromptu = Jazz.
-  -- use "sudormrfbin/cheatsheet.nvim"                 -- https://github.com/sudormrfbin/cheatsheet.nvim                 | Searchable cheatsheet.
+     use "sudormrfbin/cheatsheet.nvim"                 -- https://github.com/sudormrfbin/cheatsheet.nvim                 | Searchable cheatsheet.
   -- use "code-biscuits/nvim-biscuits"                 -- https://github.com/code-biscuits/nvim-biscuits                 | A Neovim port of Assorted Biscuits. Ends up with more supported languages too.
   -- use "Pocco81/AbbrevMan.nvim"                      -- https://github.com/Pocco81/AbbrevMan.nvim                      | A NeoVim plugin for managing vim abbreviations.
   -- use "kazhala/close-buffers.nvim"                  -- https://github.com/kazhala/close-buffers.nvim                  | Delete multiple vim buffers based on different conditions.
