@@ -310,7 +310,7 @@ return packer.startup(function(use)
   -- use "kazhala/close-buffers.nvim"                  -- https://github.com/kazhala/close-buffers.nvim                  | Delete multiple vim buffers based on different conditions.
   -- use "rktjmp/paperplanes.nvim"                     -- https://github.com/rktjmp/paperplanes.nvim                     | Post selections or buffers to online paste bins.
   -- use "max397574/better-escape.nvim"                -- https://github.com/max397574/better-escape.nvim                | Create shortcuts to escape insert mode without getting delay.
-  -- use "rcarriga/nvim-notify"                        -- https://github.com/rcarriga/nvim-notify                        | A fancy, configurable, notification manager for NeoVim.
+     use "rcarriga/nvim-notify"                        -- https://github.com/rcarriga/nvim-notify                        | A fancy, configurable, notification manager for NeoVim.
   -- use "saifulapm/chartoggle.nvim"                   -- https://github.com/saifulapm/chartoggle.nvim                   | Toggle any character at end of line for Neovim.
   -- use "stevearc/dressing.nvim"                      -- https://github.com/stevearc/dressing.nvim                      | Improve the built-in <code>vim.ui</code> interfaces with telescope, fzf, etc.
 -- Icon
