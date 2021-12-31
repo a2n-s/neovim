@@ -268,7 +268,7 @@ return packer.startup(function(use)
   -- use "MordechaiHadad/nvim-papadark"                -- https://github.com/MordechaiHadad/nvim-papadark                | My own Neovim colorscheme.
   -- use "ishan9299/nvim-solarized-lua"                -- https://github.com/ishan9299/nvim-solarized-lua                | Solarized colorscheme in Lua for Neovim 0.5.
   -- use "shaunsingh/moonlight.nvim"                   -- https://github.com/shaunsingh/moonlight.nvim                   | Port of VSCode's Moonlight colorscheme for NeoVim, written in Lua with built-in support for native LSP, Tree-sitter and many more plugins.
-  -- use "navarasu/onedark.nvim"                       -- https://github.com/navarasu/onedark.nvim                       | A One Dark Theme for Neovim 0.5 written in Lua based on Atom's One Dark Theme.
+     use "navarasu/onedark.nvim"                       -- https://github.com/navarasu/onedark.nvim                       | A One Dark Theme for Neovim 0.5 written in Lua based on Atom's One Dark Theme.
   -- use "lourenci/github-colors"                      -- https://github.com/lourenci/github-colors                      | GitHub colors leveraging Tree-sitter to get 100% accuracy.
   -- use "sainnhe/gruvbox-material"                    -- https://github.com/sainnhe/gruvbox-material                    | Gruvbox modification with softer contrast and Tree-sitter support.
   -- use "sainnhe/everforest"                          -- https://github.com/sainnhe/everforest                          | A green based colorscheme designed to be warm, soft and easy on the eyes.

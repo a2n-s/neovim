@@ -19,7 +19,13 @@
 
 local status_ok, cheatsheet = pcall(require, "cheatsheet")
 if not status_ok then
-  vim.notify("Could not load properly 'cheatsheet' inside 'cheatsheet.lua'")
+  local notify_ok, notify = pcall(require, "notify")
+  if not notify_ok then
+    vim.notify("Could not load properly 'cheatsheet' inside 'cheatsheet.lua'")
+  else
+    local plugin = "sudormrfbin/cheatsheet.nvim"
+    notify("This is an error message.\nSomething went wrong!", "error", { title = plugin })
+  end
   return
 end
 

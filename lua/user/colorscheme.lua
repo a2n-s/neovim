@@ -16,9 +16,26 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+-- local colorscheme = "monokai_soda"
+-- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+-- if not status_ok then
+--   vim.notify("colorscheme " .. colorscheme .. " not found!")
+--   return
+-- end
+--
+-- if not status_ok then
+--   local notify_ok, notify = pcall(require, "notify")
+--   if not notify_ok then
+--     vim.notify("Could not load properly 'cheatsheet' inside 'cheatsheet.lua'")
+--   else
+--     local plugin = "sudormrfbin/cheatsheet.nvim"
+--     notify("This is an error message.\nSomething went wrong!", "error", { title = plugin })
+--   end
+--   return
+-- end
 vim.cmd [[
 try
-  colorscheme monokai
+  colorscheme monokai_soda
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

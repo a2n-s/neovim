@@ -9,8 +9,9 @@
 --      _    _/_/    / / /_/ / /_/ /  _/_/    / /_/ (__  )  __/ /     _/_/    / /_/ /_/ / /_/ / /_/ / /  __/ /_/  __/ /  / / / / / /   _    / / /_/ / /_/ /
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__/\____/\__, /\__, /_/\___/\__/\___/_/  /_/ /_/ /_/   (_)  /_/\__,_/\__,_/
 --                                                                                     /____//____/
--- Description:  TODO
--- Dependencies: TODO
+-- Description:  manages terminals inside neovim.
+--               see https://github.com/akinsho/toggleterm.nvim
+-- Dependencies:
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
