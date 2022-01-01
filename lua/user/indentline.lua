@@ -17,9 +17,15 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "lukas-reineke/indent-blankline.nvim"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
-  vim.notify("Could not load properly 'indent_blankline' inside 'indentline.lua'")
+  local err_msg = "Could not load properly 'indent_blankline' inside 'indentline.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
 	return
 end
 

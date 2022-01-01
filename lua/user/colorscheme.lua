@@ -16,6 +16,27 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+-- local notify_ok, notify = pcall(require, "notify")
+-- local plugin            = ""
+-- local error_timeout     = 5000
+-- local err_opts          = { title=plugin, timeout=error_timeout }
+--
+--   local err_msg = 
+--   if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
+-- -- local notify_ok, notify = pcall(require, "notify")
+-- local plugin            = "kyazdani42/nvim-tree.lua"
+-- local error_timeout     = 5000
+-- local success_timeout   = 500
+--
+-- local status_ok, nvim_tree = pcall(require, "nvim-tree")
+-- if not status_ok then
+--   if not notify_ok then vim.notify("Could not load properly 'nvim-tree' inside 'nvim-tree.lua'")
+--   else                      notify("This is an error message.\nSomething went wrong!", "error", { title = plugin, timeout = error_timeout })  end
+--   return
+-- else
+--   if not notify_ok then vim.notify("'nvim-tree' properly loaded inside 'nvim-tree.lua'")
+--   else                      notify("This is not an error message.\nNothing went wrong!", "info", { title = plugin, timeout = success_timeout }) end
+-- end
 -- local colorscheme = "monokai_soda"
 -- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 -- if not status_ok then

@@ -17,11 +17,18 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "ahmedkhalf/project.nvim"
+local error_timeout     = 1000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local status_ok, project = pcall(require, "project_nvim")
 if not status_ok then
-  vim.notify("Could not load properly 'project_nvim' inside 'project.lua'")
+  local err_msg = "Could not load properly 'project_nvim' inside 'project.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
 	return
 end
+
 project.setup({
 	---@usage set to false to disable project.nvim.
 	--- This is on by default since it's currently the expected behavior.
@@ -60,9 +67,13 @@ project.setup({
   datapath = vim.fn.stdpath("data"),
 })
 
+plugin   = "nvim-telescope/telescope.nvim"
+err_opts = { title=plugin, timeout=error_timeout }
+
 local tele_status_ok, telescope = pcall(require, "telescope")
 if not tele_status_ok then
-  vim.notify("Could not load properly 'telescope' inside 'project.lua'")
+  local err_msg = "Could not load properly 'telescope' inside 'project.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
 	return
 end
 

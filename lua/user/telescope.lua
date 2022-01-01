@@ -10,15 +10,22 @@
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \__/\___/_/\___/____/\___/\____/ .___/\___/   (_)  /_/\__,_/\__,_/
 --                                                                                                          /_/
 -- Description:  telescope configuration.
+--               see https://github.com/nvim-telescope/telescope.nvim
 -- Dependencies: telescope media files.
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "nvim-telescope/telescope.nvim"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-  vim.notify("Could not load properly 'telescope' inside 'telescope.lua'")
+  local err_msg = "Could not load properly 'telescope' inside 'telescope.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 

@@ -17,10 +17,15 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
--- Setup nvim-cmp.
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "windwp/nvim-autopairs"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
-  vim.notify("Could not load properly 'nvim-autopairs' inside 'autopairs.lua'")
+  local err_msg = "Could not load properly 'nvim-autopairs' inside 'autopairs.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 
@@ -45,10 +50,13 @@ npairs.setup {
   },
 }
 
+plugin   = "windwp/nvim-autopairs"
+err_opts = { title=plugin, timeout=error_timeout }
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  vim.notify("Could not load properly 'cmp' inside 'autopairs.lua'")
+  local err_msg = "Could not load properly 'cmp' inside 'autopairs.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })

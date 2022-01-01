@@ -17,15 +17,15 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "sudormrfbin/cheatsheet.nvim"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local status_ok, cheatsheet = pcall(require, "cheatsheet")
 if not status_ok then
-  local notify_ok, notify = pcall(require, "notify")
-  if not notify_ok then
-    vim.notify("Could not load properly 'cheatsheet' inside 'cheatsheet.lua'")
-  else
-    local plugin = "sudormrfbin/cheatsheet.nvim"
-    notify("This is an error message.\nSomething went wrong!", "error", { title = plugin })
-  end
+  local err_msg = "Could not load properly 'cheatsheet' inside 'cheatsheet.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 

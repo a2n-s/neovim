@@ -40,15 +40,22 @@ vim.g.nvim_tree_icons = {
   },
 }
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "kyazdani42/nvim-tree.lua"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
-  vim.notify("Could not load properly 'nvim-tree' inside 'nvim-tree.lua'")
+  local err_msg = "Could not load properly 'nvim-tree' inside 'nvim-tree.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 
 local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
 if not config_status_ok then
-  vim.notify("Could not load properly 'nvim-tree.config' inside 'nvim-tree.lua'")
+  local err_msg = "Could not load properly 'nvim-tree.config' inside 'nvim-tree.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 

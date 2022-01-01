@@ -10,21 +10,29 @@
 --     (_)  /_/     /_/\__,_/\__,_/  /_/      \__,_/____/\___/_/     /_/      \___/_/ /_/ /_/ .___/   (_)  /_/\__,_/\__,_/
 --                                                                                         /_/
 -- Description:  loads and configure the high lever management of the autocompletion in neovim.
+--               see https://github.com/hrsh7th/nvim-cmp
 -- Dependencies: completion related plugins, see plugins.lua for a list of plugins.
 -- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
 --               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "hrsh7th/nvim-cmp"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  vim.notify("Could not load properly 'cmp' inside 'cmp.lua'")
+  local err_msg = "Could not load properly 'cmp' inside 'cmp.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-  vim.notify("Could not load properly 'luasnip' inside 'cmp.lua'")
+  local err_msg = "Could not load properly 'luasnip' inside 'cmp.lua'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
   return
 end
 

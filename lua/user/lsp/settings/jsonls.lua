@@ -16,10 +16,18 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
+local notify_ok, notify = pcall(require, "notify")
+local plugin            = "jsonls"
+local error_timeout     = 5000
+local err_opts          = { title=plugin, timeout=error_timeout }
+
 local default_schemas = nil
 local status_ok, jsonls_settings = pcall(require, "nlspsettings.jsonls")
 if status_ok then
   default_schemas = jsonls_settings.get_default_schemas()
+else
+  local err_msg = "Could not load properly 'nlspsettings.jsonls' in 'lsp.settings.jsonls'"
+  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
 end
 
 local schemas = {

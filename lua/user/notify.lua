@@ -24,6 +24,7 @@ if not status_ok then
   vim.notify("Could not load properly 'notify' inside 'notify.lua'")
   return
 end
+vim.notify = notify
 
 notify.setup({
   stages   = "slide",              -- Animation style (see below for details). One of: "fade_in_slide_out", "fade", "slide", "static", "default".
