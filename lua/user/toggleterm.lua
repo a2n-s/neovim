@@ -58,32 +58,28 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 
-function _LAZYGIT_TOGGLE()
-	lazygit:toggle()
-end
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+function _LAZYGIT_TOGGLE()  lazygit:toggle() end
+
+local tig = Terminal:new({ cmd = "tig --all", hidden = true, direction = "float" })
+function _TIG_TOGGLE()  tig:toggle() end
+
+local cfg_lazygit = Terminal:new({ cmd = "lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME", hidden = true, direction = "float" })
+function _CFG_LAZYGIT_TOGGLE()  cfg_lazygit:toggle() end
+
+-- local cfg_tig = Terminal:new({ cmd = "GIT_DIR=$HOME/.dotfiles tig -C $HOME/.dotfiles --all", hidden = true, direction = "float" })
+local cfg_tig = Terminal:new({ cmd = "GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME tig --all", hidden = true, direction = "float" })
+function _CFG_TIG_TOGGLE()  cfg_tig:toggle() end
 
 local node = Terminal:new({ cmd = "node", hidden = true })
-
-function _NODE_TOGGLE()
-	node:toggle()
-end
+function _NODE_TOGGLE()  node:toggle() end
 
 local ncdu = Terminal:new({ cmd = "ncdu", hidden = true })
-
-function _NCDU_TOGGLE()
-	ncdu:toggle()
-end
+function _NCDU_TOGGLE()  ncdu:toggle() end
 
 local htop = Terminal:new({ cmd = "htop", hidden = true })
-
-function _HTOP_TOGGLE()
-	htop:toggle()
-end
+function _HTOP_TOGGLE()  htop:toggle() end
 
 local python = Terminal:new({ cmd = "python", hidden = true })
-
-function _PYTHON_TOGGLE()
-	python:toggle()
-end
+function _PYTHON_TOGGLE()  python:toggle() end

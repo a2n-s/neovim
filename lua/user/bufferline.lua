@@ -54,7 +54,8 @@ bufferline.setup {
     max_name_length   = 30,
     max_prefix_length = 30,         -- prefix used when a buffer is de-duplicated
     tab_size          = 21,
-    diagnostics       = "nvim_lsp", --"nvim_lsp", -- | "nvim_lsp" | "coc",
+-- Feature is deprecated due to vim.lsp which is deprecated. Deprecation spotted on January 1st 2022.
+    -- diagnostics       = "nvim_lsp", --"nvim_lsp", -- | "nvim_lsp" | "coc".
     diagnostics_update_in_insert = false,
     -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
     --   return "("..count..")"
@@ -92,10 +93,10 @@ bufferline.setup {
     custom_areas = {
       right = function()
         local result  = {}
-        local error   = vim.lsp.diagnostic.get_count(0, [[Error]])
-        local warning = vim.lsp.diagnostic.get_count(0, [[Warning]])
-        local info    = vim.lsp.diagnostic.get_count(0, [[Information]])
-        local hint    = vim.lsp.diagnostic.get_count(0, [[Hint]])
+        local error   = vim.diagnostic.get_count(0, [[Error]])
+        local warning = vim.diagnostic.get_count(0, [[Warning]])
+        local info    = vim.diagnostic.get_count(0, [[Information]])
+        local hint    = vim.diagnostic.get_count(0, [[Hint]])
 
         if error ~= 0 then
           table.insert(result, {text = "  " .. error,   guifg = "#EC5241"})

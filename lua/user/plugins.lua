@@ -383,7 +383,7 @@ return packer.startup(function(use)
   -- use "ThePrimeagen/vim-be-good"                    -- https://github.com/ThePrimeagen/vim-be-good                    | Vim-be-good is a Neovim plugin designed to make you better at Vim Movements.
   -- use "ThePrimeagen/vim-apm"                        -- https://github.com/ThePrimeagen/vim-apm                        | Vim APM, Actions per minute, is the greatest plugin since vim-slicedbread.
      use "alec-gibson/nvim-tetris"                     -- https://github.com/alec-gibson/nvim-tetris                     | Bringing emacs' greatest feature to Neovim - Tetris!.
-  -- use "seandewar/nvimesweeper"                      -- https://github.com/seandewar/nvimesweeper                      | Play Minesweeper in your favourite text editor.
+     use "seandewar/nvimesweeper"                      -- https://github.com/seandewar/nvimesweeper                      | Play Minesweeper in your favourite text editor.
 -- File explorer
      use "kyazdani42/nvim-tree.lua"                    -- https://github.com/kyazdani42/nvim-tree.lua                    | A simple and fast file explorer tree for Neovim !.
   -- use "luukvbaal/nnn.nvim"                          -- https://github.com/luukvbaal/nnn.nvim                          | File explorer powered by <a href="https://github.com/jarun/nnn">nnn</a> and Lua.
