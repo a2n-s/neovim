@@ -116,6 +116,8 @@ local mappings = {
   ["P"] = { "<cmd>Telescope projects<cr>",                                           "Projects"                           },
   ["S"] = { "<cmd>luafile $MYVIMRC<cr>:luafile %<cr>",                      "Source the config"                           },
   ["?"] = { "<cmd>Cheatsheet<cr>",                                                       "Help"                           },
+  ["<space>"]
+        = { "<cmd>lua require('cmdbuf').split_open(vim.o.cmdheight)<cr>o",       "Command line"                           },
   T = { name =                                                                      "Telescope",
     n = { "<cmd>Telescope notify<cr>",                                                          "Notifications"           },
     g = { "<cmd>Telescope live_grep theme=ivy<cr>",                                             "Find Text"               },

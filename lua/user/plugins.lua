@@ -76,7 +76,6 @@ return packer.startup(function(use)
 --   Marks                Tabline                             Motion                        Command Line
 --   Fuzzy Finder         Statusline                          Code Runner                   Session
 --   Note Taking            Statusline component              GitHub                        Test
-
 -- Management
      use "wbthomason/packer.nvim"                      -- https://github.com/wbthomason/packer.nvim                      | Have packer manage itself
      use "nvim-lua/popup.nvim"                         -- https://github.com/nvim-lua/popup.nvim                         | An implementation of the Popup API from vim in Neovim
@@ -503,7 +502,7 @@ return packer.startup(function(use)
 -- Discord Rich Presence
   -- use "andweeb/presence.nvim"                       -- https://github.com/andweeb/presence.nvim                       | Fast and lite Discord Rich Presence plugin for Neovim written in Lua.
 -- Command Line
-  -- use "notomo/cmdbuf.nvim"                          -- https://github.com/notomo/cmdbuf.nvim                          | Alternative command-line-window plugin.
+     use "notomo/cmdbuf.nvim"                          -- https://github.com/notomo/cmdbuf.nvim                          | Alternative command-line-window plugin.
   -- use "gelguy/wilder.nvim"                          -- https://github.com/gelguy/wilder.nvim                          | A plugin for fuzzy command line autocompletion.
 -- Session
   -- use "rmagatti/auto-session"                       -- https://github.com/rmagatti/auto-session                       | A small automated session manager for Neovim.
