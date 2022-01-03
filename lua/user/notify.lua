@@ -21,8 +21,11 @@
 -- Use a protected call so we don't error out on first use
 local status_ok, notify = pcall(require, "notify")
 if not status_ok then
-  vim.notify("Could not load properly 'notify' inside 'notify.lua'")
+  vim.notify = function(msg, log_level, meta) vim.api.nvim_err_writeln(log_level .. ": " .. meta.title .. "\n     " ..msg) end
+  vim.notify("Could not load properly 'notify' inside 'notify.lua'", "error", {title="rcarriga/nvim-notify"})
   return
+else
+  vim.notify = function(msg, log_level, meta) notify(msg, log_level, meta) end
 end
 vim.notify = notify
 

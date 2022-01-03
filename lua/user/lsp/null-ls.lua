@@ -16,15 +16,10 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
-local notify_ok, notify = pcall(require, "notify")
-local plugin            = "null-ls"
-local error_timeout     = 5000
-local err_opts          = { title=plugin, timeout=error_timeout }
-
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-  local err_msg = "Could not load properly 'null-ls' inside 'lsp/null-ls.lua'"
-  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
+  local err_opts = { title="null-ls", timeout=5000 }
+  vim.notify("Could not load properly 'null-ls' inside 'lsp/null-ls.lua'", "error", err_opts)
 	return
 end
 

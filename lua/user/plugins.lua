@@ -44,15 +44,10 @@ vim.cmd [[
 ]]
 
 -- Use a protected call so we don't error out on first use
-local notify_ok, notify = pcall(require, "notify")
-local plugin            = "wbthomason/packer.nvim"
-local error_timeout     = 5000
-local err_opts          = { title=plugin, timeout=error_timeout }
-
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  local err_msg = "Could not load properly 'packer' inside 'plugins.lua'"
-  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
+  local err_opts = { title="wbthomason/packer.nvim", timeout=5000 }
+  vim.notify("Could not load properly 'packer' inside 'plugins.lua'", "error", err_opts)
   return
 end
 
@@ -335,7 +330,7 @@ return packer.startup(function(use)
   -- use "rafcamlet/nvim-luapad"                       -- https://github.com/rafcamlet/nvim-luapad                       | Interactive real time Neovim scratchpad for embedded Lua engine - Type and watch!.
   -- use "nvim-lua/plenary.nvim"                       -- https://github.com/nvim-lua/plenary.nvim                       | Plenary: full; complete; entire; absolute; unqualified. All the Lua functions I don't want to write twice.
   -- use "nvim-lua/popup.nvim"                         -- https://github.com/nvim-lua/popup.nvim                         | An implementation of the Popup API from vim in Neovim.
-  -- use "tjdevries/vlog.nvim"                         -- https://github.com/tjdevries/vlog.nvim                         | Single file, no dependency, easy copy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                amp; paste log file to add to your Neovim Lua plugins.
+     use "tjdevries/vlog.nvim"                         -- https://github.com/tjdevries/vlog.nvim                         | Single file, no dependency, easy copy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                amp; paste log file to add to your Neovim Lua plugins.
   -- use "bfredl/nvim-luadev"                          -- https://github.com/bfredl/nvim-luadev                          | REPL/debug console for Neovim Lua plugins. The <code>:Luadev</code> command will open an scratch window which will show output from executing Lua code.
   -- use "jbyuki/one-small-step-for-vimkind"           -- https://github.com/jbyuki/one-small-step-for-vimkind           | An adapter for the Neovim Lua language. It allows you to debug any Lua code running in a Neovim instance (A Lua plugin that can debug Neovim Lua plugins).
   -- use "tami5/sqlite.lua"                            -- https://github.com/tami5/sqlite.lua                            | SQLite/LuaJIT binding for Lua and Neovim.

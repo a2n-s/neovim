@@ -17,15 +17,10 @@
 -- Contributors: Stevan Antoine
 --               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
 
-local notify_ok, notify = pcall(require, "notify")
-local plugin            = "neovim/nvim-lspconfig"
-local error_timeout     = 5000
-local err_opts          = { title=plugin, timeout=error_timeout }
-
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not status_ok then
-  local err_msg = "Could not load properly 'nvim-lsp-installer' inside 'lsp/lsp-installer.lua'"
-  if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
+  local err_opts = { title="neovim/nvim-lspconfig", timeout=5000 }
+  vim.notify("Could not load properly 'nvim-lsp-installer' inside 'lsp/lsp-installer.lua'", "error", err_opts)
 	return
 end
 
