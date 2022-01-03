@@ -19,15 +19,13 @@
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  local err_opts = { title="hrsh7th/nvim-cmp", timeout=5000 }
-  vim.notify("Could not load properly 'cmp' inside 'cmp.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'cmp' inside 'cmp.lua'", "error", { title="hrsh7th/nvim-cmp" })
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-  local err_opts = { title="hrsh7th/nvim-cmp", timeout=5000 }
-  vim.notify("Could not load properly 'luasnip' inside 'cmp.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'luasnip' inside 'cmp.lua'", "error", { title="hrsh7th/nvim-cmp" })
   return
 end
 

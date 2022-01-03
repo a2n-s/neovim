@@ -19,8 +19,7 @@
 
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-  local err_opts = { title="goolord/alpha-nvim", timeout=5000 }
-  vim.notify("Could not load properly 'alpha' inside 'alpha.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'alpha' inside 'alpha.lua'", "error", { title="goolord/alpha-nvim" })
 	return
 end
 

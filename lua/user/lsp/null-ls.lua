@@ -18,8 +18,7 @@
 
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-  local err_opts = { title="null-ls", timeout=5000 }
-  vim.notify("Could not load properly 'null-ls' inside 'lsp/null-ls.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'null-ls' inside 'lsp/null-ls.lua'", "error", { title="null-ls" })
 	return
 end
 

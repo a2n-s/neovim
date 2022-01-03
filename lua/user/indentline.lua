@@ -19,8 +19,7 @@
 
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
-  local err_opts = { title="lukas-reineke/indent-blankline.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'indent_blankline' inside 'indentline.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'indent_blankline' inside 'indentline.lua'", "error", { title="lukas-reineke/indent-blankline.nvim" })
 	return
 end
 

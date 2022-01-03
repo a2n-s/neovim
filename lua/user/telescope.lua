@@ -19,8 +19,7 @@
 
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-  local err_opts = { title="nvim-telescope/telescope.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'telescope' inside 'telescope.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'telescope' inside 'telescope.lua'", "error", { title="nvim-telescope/telescope.nvim" })
   return
 end
 

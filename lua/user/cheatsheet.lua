@@ -19,9 +19,8 @@
 
 
 local status_ok, cheatsheet = pcall(require, "cheatsheet")
-if status_ok then
-  local err_opts = { title="sudormrfbin/cheatsheet.nvim", timeout=5000}
-  vim.notify("Could not load 'cheatsheet' inside 'cheatsheet.lua'", "error", err_opts)
+if not status_ok then
+  vim.notify("Could not load 'cheatsheet' inside 'cheatsheet.lua'", "error", { title="sudormrfbin/cheatsheet.nvim" })
   return
 end
 

@@ -19,8 +19,7 @@
 
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not status_ok then
-  local err_opts = { title="neovim/nvim-lspconfig", timeout=5000 }
-  vim.notify("Could not load properly 'nvim-lsp-installer' inside 'lsp/lsp-installer.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'nvim-lsp-installer' inside 'lsp/lsp-installer.lua'", "error", { title="neovim/nvim-lspconfig" })
 	return
 end
 

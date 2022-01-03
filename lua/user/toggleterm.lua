@@ -19,8 +19,7 @@
 
 local status_ok, toggleterm = pcall(require, "toggleterm")
 if not status_ok then
-  local err_opts = { title="akinsho/toggleterm.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'toggleterm' inside 'toggleterm.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'toggleterm' inside 'toggleterm.lua'", "error", { title="akinsho/toggleterm.nvim" })
   return
 end
 

@@ -19,8 +19,7 @@
 
 local status_ok, comment = pcall(require, "Comment")
 if not status_ok then
-  local err_opts = { title="numToStr/Comment.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'Comment' inside 'comment.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'Comment' inside 'comment.lua'", "error", { title="numToStr/Comment.nvim" })
   return
 end
 

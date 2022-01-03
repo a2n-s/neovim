@@ -18,6 +18,6 @@ local function system()
 	return who
 end
 
-notify("Hi "..system().."Welcome back in Neovim!", vim.lsp.log_levels.DEBUG, { title = "Greetings " })
-notify(rnd_msg(), vim.lsp.log_levels.INFO, { title = "A random tip..." })
+notify("Hi "..system().."Welcome back in Neovim!", vim.lsp.log_levels.DEBUG, { title = "Greetings ", timeout=5000 })
+notify(rnd_msg(), vim.lsp.log_levels.INFO, { title = "A random tip...", timeout=5000 })
 

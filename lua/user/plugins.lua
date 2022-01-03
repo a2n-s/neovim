@@ -46,8 +46,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  local err_opts = { title="wbthomason/packer.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'packer' inside 'plugins.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'packer' inside 'plugins.lua'", "error", { title="wbthomason/packer.nvim" })
   return
 end
 

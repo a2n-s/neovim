@@ -19,8 +19,7 @@
 
 local status_ok, impatient = pcall(require, "impatient")
 if not status_ok then
-  local err_opts = { title="lewis6991/impatient.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'impatient' inside 'impatient.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'impatient' inside 'impatient.lua'", "error", { title="lewis6991/impatient.nvim" })
   return
 end
 

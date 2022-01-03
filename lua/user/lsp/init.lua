@@ -18,8 +18,7 @@
 
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
-  local err_opts = { title="lsp", timeout=5000 }
-  vim.notify("Could not load properly 'lspconfig' inside 'lsp/init.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'lspconfig' inside 'lsp/init.lua'", "error", { title="lsp" })
   return
 end
 

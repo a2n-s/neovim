@@ -18,8 +18,7 @@
 
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-  local err_opts = { title="nvim-treesitter/nvim-treesitter", timeout=5000 }
-  vim.notify("Could not load properly 'nvim-treesitter.configs' inside 'treesitter.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'nvim-treesitter.configs' inside 'treesitter.lua'", "error", { title="nvim-treesitter/nvim-treesitter" })
   return
 end
 

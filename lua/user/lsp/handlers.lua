@@ -109,8 +109,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
-  local err_opts = { title="neovim/nvim-lspconfig", timeout=5000 }
-  vim.notify("Could not load properly 'cmp_nvim_lsp' inside 'lsp/handlers.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'cmp_nvim_lsp' inside 'lsp/handlers.lua'", "error", { title="neovim/nvim-lspconfig" })
   return
 end
 

@@ -19,8 +19,7 @@
 
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
-  local err_opts = { title="lewis6991/gitsigns.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'gitsigns' inside 'gitsign.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'gitsigns' inside 'gitsign.lua'", "error", { title="lewis6991/gitsigns.nvim" })
   return
 end
 

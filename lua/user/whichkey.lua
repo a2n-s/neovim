@@ -19,8 +19,7 @@
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
-  local err_opts = { title="folke/which-key.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'which-key' inside 'whichkey.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'which-key' inside 'whichkey.lua'", "error", { title="folke/which-key.nvim" })
   return
 end
 

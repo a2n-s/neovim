@@ -19,8 +19,7 @@
 
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-  local err_opts = { title="nvim-lualine/lualine.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'lualine' inside 'lualine.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'lualine' inside 'lualine.lua'", "error", { title="nvim-lualine/lualine.nvim" })
 	return
 end
 

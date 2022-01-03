@@ -21,8 +21,7 @@ local status_ok, jsonls_settings = pcall(require, "nlspsettings.jsonls")
 if status_ok then
   default_schemas = jsonls_settings.get_default_schemas()
 else
-  local err_opts = { title="jsonls", timeout=5000 }
-  vim.notify("Could not load properly 'nlspsettings.jsonls' in 'lsp.settings.jsonls'", "error", err_opts)
+  vim.notify("Could not load properly 'nlspsettings.jsonls' in 'lsp.settings.jsonls'", "error", { title="jsonls" })
 end
 
 local schemas = {

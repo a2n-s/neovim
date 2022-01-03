@@ -19,8 +19,7 @@
 
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
-  local err_opts = { title="akinsho/bufferline.nvim", timeout=5000 }
-  vim.notify("Could not load properly 'bufferline' inside 'bufferline.lua'", "error", err_opts)
+  vim.notify("Could not load properly 'bufferline' inside 'bufferline.lua'", "error", { title="akinsho/bufferline.nvim" })
   return
 end
 
