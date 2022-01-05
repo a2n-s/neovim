@@ -86,8 +86,8 @@ nvim_tree.setup {
     ignore_list = {},
   },
   system_open = {
-    cmd  = nil,
-    args = {},
+    cmd  = "kitty",
+    args = {"lf"},
   },
   filters = {
     dotfiles = false,
@@ -110,7 +110,7 @@ nvim_tree.setup {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
         { key = {"<2-RightMouse>", "<C-]>"},    cb = tree_cb("cd") },
         { key = {"<C-v>", "v"},                 cb = tree_cb("vsplit") },
-        { key = "<C-x>",                        cb = tree_cb("split") },
+        { key = {"<C-x>", "s"},                 cb = tree_cb("split") },
         { key = "<C-t>",                        cb = tree_cb("tabnew") },
         { key = "<",                            cb = tree_cb("prev_sibling") },
         { key = ">",                            cb = tree_cb("next_sibling") },
@@ -136,7 +136,7 @@ nvim_tree.setup {
         { key = "[c",                           cb = tree_cb("prev_git_item") },
         { key = "]c",                           cb = tree_cb("next_git_item") },
         { key = "-",                            cb = tree_cb("dir_up") },
-        { key = "s",                            cb = tree_cb("system_open") },
+        { key = "S",                            cb = tree_cb("system_open") },
         { key = "q",                            cb = tree_cb("close") },
         { key = "g?",                           cb = tree_cb("toggle_help") },
       },
