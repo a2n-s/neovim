@@ -26,11 +26,11 @@ end
 -- see https://github.com/folke/which-key.nvim#%EF%B8%8F-configuration
 local setup = {
   plugins = {
-    marks         = true, -- shows a list of your marks on ' and `
-    registers     = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+    marks         = true,  -- shows a list of your marks on ' and `
+    registers     = true,  -- shows your registers on " in NORMAL or <C-r> in INSERT mode
     spelling  = {
-      enabled     = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 20,   -- how many suggestions should be shown in the list?
+      enabled     = true,  -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+      suggestions = 20,    -- how many suggestions should be shown in the list?
     },
     -- the presets plugin, adds help for a bunch of default keybindings in Neovim
     -- No actual key bindings are created
@@ -100,7 +100,7 @@ local opts = {
 }
 -- see https://github.com/folke/which-key.nvim#%EF%B8%8F-mappings
 local mappings = {
-  -- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   -- ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",    "Buffers"},
   -- ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find files"},
   ["f"] = { "<cmd>Telescope find_files theme=dropdown previewer=false<cr>",        "Find files"                           },
@@ -117,7 +117,20 @@ local mappings = {
   ["S"] = { "<cmd>luafile $MYVIMRC<cr>:luafile %<cr>",                      "Source the config"                           },
   ["?"] = { "<cmd>Cheatsheet<cr>",                                                       "Help"                           },
   ["<space>"]
-        = { "<cmd>lua require('cmdbuf').split_open(vim.o.cmdheight)<cr>o",       "Command line"                           },
+        = { ":",                                                                 "Command line"                           },
+        -- = { "<cmd>lua require('cmdbuf').split_open(vim.o.cmdheight)<cr>o",       "Command line"                           },
+  m = { name =                                                                          "Magma",
+    i = { "<cmd>MagmaInit<CR>",                                                                 "Init"                    },
+    g = { "<cmd>MagmaDeinit<CR>",                                                               "Deinit"                  },
+    O = { "<cmd>nvim_exec('MagmaEvaluateOperator', v:true)<CR>",                                "Operator"                },
+    l = { "<cmd>MagmaEvaluateLine<CR>",                                                         "Line"                    },
+    v = { "<cmd>MagmaEvaluateVisual<CR>",                                                       "Visual"                  },
+    c = { "<cmd>MagmaReevaluateCell<CR>",                                                       "Cell"                    },
+    d = { "<cmd>MagmaDelete<CR>",                                                               "Delete"                  },
+    o = { "<cmd>MagmaShowOutput<CR>",                                                           "Output"                  },
+    S = { ":MagmaSave ",                                                                        "Save"                    },
+    L = { ":MagmaLoad ",                                                                        "Load"                    },
+                                                                                                                          },
   T = { name =                                                                      "Telescope",
     n = { "<cmd>Telescope notify<cr>",                                                          "Notifications"           },
     g = { "<cmd>Telescope live_grep theme=ivy<cr>",                                             "Find Text"               },
@@ -174,6 +187,7 @@ local mappings = {
     d = { "<cmd>Telescope diagnostics bufnr=0<cr>",                                             "Document Diagnostics"    },
     w = { "<cmd>Telescope diagnostics<cr>",                                                     "Workspace Diagnostics"   },
     f = { "<cmd>lua vim.lsp.buf.formatting()<cr>",                                              "Format"                  },
+    n = { "<cmd>NullLsInfo<cr>",                                                                "Null-ls info"            },
     i = { "<cmd>LspInfo<cr>",                                                                   "Info"                    },
     I = { "<cmd>LspInstallInfo<cr>",                                                            "Installer Info"          },
     j = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",                                        "Next Diagnostic"         },

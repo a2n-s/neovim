@@ -28,7 +28,7 @@ local options = {
   cursorline     = true,                      -- highlight the current line.
   cursorcolumn   = true,                      -- highlight the current column.
   number         = true,                      -- set numbered lines.
-  list           = true,                      -- set invisible characters.
+  list           = false,                     -- set invisible characters.
   relativenumber = false,                     -- set relative numbered lines.
   numberwidth    = 4,                         -- set number column width to 4 {default 4}.
   signcolumn     = "yes",                     -- show the sign column, otherwise it would shift the text each time.
@@ -63,7 +63,7 @@ local options = {
   undofile       = true,                      -- enable persistent undo.
   writebackup    = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited.
 }
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append "atc"
 
 -- add all previously defined options to the vim options.
 for k, v in pairs(options) do

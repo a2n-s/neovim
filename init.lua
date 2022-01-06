@@ -41,8 +41,7 @@ require "user.whichkey"         -- https://github.com/folke/which-key.nvim
 require "user.autocommands"
 
 require "user.venn"             -- https://github.com/jbyuki/venn.nvim
-
 require "user.cheatsheet"       -- https://github.com/sudormrfbin/cheatsheet.nvim
-require "user.jupyter"          -- https://github.com/ahmedkhalf/jupyter-nvim
+-- require "user.jupyter"          -- https://github.com/ahmedkhalf/jupyter-nvim
 
 require "user.notify.greetings"

@@ -555,7 +555,10 @@ return packer.startup(function(use)
      use "antoinemadec/FixCursorHold.nvim"             -- https://github.com/antoinemadec/FixCursorHold.nvim             | This is needed to fix lsp doc highlight
      use "moll/vim-bbye"                               -- https://github.com/moll/vim-bbye                               |
      use "lewis6991/impatient.nvim"                    -- https://github.com/lewis6991/impatient.nvim                    |
-     use "ahmedkhalf/jupyter-nvim"                     -- https://github.com/ahmedkhalf/jupyter-nvim                     |
+     -- use "ahmedkhalf/jupyter-nvim"                     -- https://github.com/ahmedkhalf/jupyter-nvim                     |
+     -- use "bfredl/nvim-ipy"                             -- https://github.com/bfredl/nvim-ipy                             |
+     use { 'dccsillag/magma-nvim',
+            run = ':UpdateRemotePlugins' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

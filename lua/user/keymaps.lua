@@ -18,69 +18,73 @@
 
 -- options for the keymaps.
 local opts = { noremap = true, silent = true }
-local term_opts = { noremap = true, silent = true }
-
--- Shorten function name.
-local keymap = vim.api.nvim_set_keymap
 
 -- Remap space as leader key.
-keymap("", "<Space>", "<Nop>", opts)
+vim.api.nvim_set_keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+local modes = {
+  normal       = "n",
+  insert       = "i",
+  visual       = "v",
+  visual_block = "x",
+  terminal     = "t",
+  -- add more mode here if you want
+}
 
--- Normal --
--- Better window navigation with ctrl+vim keys.
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
--- do not go into insert more when creating line above or below.
-keymap("n", "o", "o<Esc>", opts)  -- below.
-keymap("n", "O", "O<Esc>", opts)  -- above.
--- -- leader maps.
--- keymap("n", "<leader>s", ":luafile $MYVIMRC<CR>:luafile %<CR>",  opts)  -- sources the config.
--- keymap("n", "<leader>e", ":Lex 30<CR>",                          opts)  -- open and close the explorer window.
--- keymap("n", "<leader>c", ":nohlsearch<CR>",               opts)  -- clears the highlight.
--- Resize with ctrl+arrows.
-keymap("n", "<C-Up>",    ":resize -2<CR>",          opts)
-keymap("n", "<C-Down>",  ":resize +2<CR>",          opts)
-keymap("n", "<C-Left>",  ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
--- Navigate buffers with shift+h/l
-keymap("n", "<S-l>",   ":bnext<CR>",                opts)
--- keymap("n", "<C-S-l>", ":BufferLineMoveNext<CR>",   opts)
-keymap("n", "<S-h>",   ":bprevious<CR>",            opts)
--- keymap("n", "<C-S-h>", ":BufferLineMovePrev<CR>",   opts)
+function set_keymap(keys)
+  for mode, map in pairs(keys) do
+      local key_mode = modes[mode]
+      for key, value in pairs(map) do
+        vim.api.nvim_set_keymap(key_mode, key, value, opts)
+      end
+  end
+end
 
--- Insert --
--- Press jk fast to quit insert mode.
-keymap("i", "jk", "<ESC>", opts)
+local mappings = {
+  normal = {
+      ["<C-s>"]     = ":w<CR>",
+      ["<Tab>"]     = ":bnext<CR>",
+      ["<S-Tab>"]   = ":bprevious<CR>",
+      ["<C-e>"]     = ":bdelete<CR>",
+      ["<C-b>"]     = ":NvimTreeToggle<CR>",
+      ["<C-p>"]     = ":Telescope find_files<CR>",
+      ["<C-h>"]     = "<C-w>h",                              -- Better window navigation with ctrl+vim keys.
+      ["<C-j>"]     = "<C-w>j",
+      ["<C-k>"]     = "<C-w>k",
+      ["<C-l>"]     = "<C-w>l",
+      ["o"]         = "o<Esc>",                              -- below.-- do not go into insert more when creating line above or below.
+      ["O"]         = "O<Esc>",                              -- above.
+      -- ["<leader>s"] = ":luafile $MYVIMRC<CR>:luafile %<CR>", -- sources the config.
+      -- ["<leader>e"] = ":Lex 30<CR>",                         -- open and close the explorer window.
+      -- ["<leader>c"] = ":nohlsearch<CR>",                     -- clears the highlight.
+      ["<C-Up>"]    = ":resize -2<CR>",                      -- Resize with ctrl+arrows.
+      ["<C-Down>"]  = ":resize +2<CR>",
+      ["<C-Left>"]  = ":vertical resize -2<CR>",
+      ["<C-Right>"] = ":vertical resize +2<CR>",
+      ["<S-l>"]     = ":bnext<CR>",                          -- Navigate buffers with shift+h/l
+      ["<S-h>"]     = ":bprevious<CR>",
+  },
+  insert = {
+      ["jk"] = "<ESC>", -- Press jk fast to quit insert mode.
+  },
+  visual = {
+      [">"]     = ">gv",          -- Stay in indent mode while changing tab alignment.
+      ["<"]     = "<gv",
+      ["<A-j>"] = ":m .+1<CR>==", -- Move text up and down with shift+j/k
+      ["<A-k>"] = ":m .-2<CR>==",
+      ["p"]     = '"_dP'          -- paste.
+  },
+  visual_block = {
+      ["J"]     = ":move '>+1<CR>gv-gv", -- Move text up and down whith shift+j/k
+      ["K"]     = ":move '<-2<CR>gv-gv",
+      ["<A-j>"] = ":move '>+1<CR>gv-gv",
+      ["<A-k>"] = ":move '<-2<CR>gv-gv",
+  },
+  terminal = {
+      ["<Esc>"] = "<Nop>",  -- disable the escape key in terminal mode as it conflicts with features from terminal apps.
+  },
+}
 
--- Visual --
--- Stay in indent mode while changing tab alignment.
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
--- Move text up and down with shift+j/k
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
--- paste.
-keymap("v", "p", '"_dP', opts)
-
--- Visual Block --
--- Move text up and down whith shift+j/k
-keymap("x", "J",     ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K",     ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- Terminal --
--- disable the escape key in terminal mode as it conflicts with features from terminal apps.
-keymap("t", "<Esc>", "<Nop>", term_opts)
+set_keymap(mappings)
