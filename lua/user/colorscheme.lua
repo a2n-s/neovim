@@ -1,7 +1,7 @@
 --             ___
---       ____ |__ \ ____              _____      personal page: https://a2n-s.github.io/ 
---      / __ `/_/ // __ \   ______   / ___/      github   page: https://github.com/a2n-s 
---     / /_/ / __// / / /  /_____/  (__  )       my   dotfiles: https://github.com/a2n-s/dotfiles 
+--       ____ |__ \ ____              _____      personal page: https://a2n-s.github.io/
+--      / __ `/_/ // __ \   ______   / ___/      github   page: https://github.com/a2n-s
+--     / /_/ / __// / / /  /_____/  (__  )       my   dotfiles: https://github.com/a2n-s/dotfiles
 --     \__,_/____/_/ /_/           /____/
 --                 __   __                  __                              __              __                     __                                 __
 --               _/_/  / /_  ______ _     _/_/  __  __________  _____     _/_/  _________  / /___  _______________/ /_  ___  ____ ___  ___           / /_  ______ _
@@ -11,54 +11,17 @@
 --
 -- Description:  loads a colorscheme or fallback to the default of neovim when not found.
 -- Dependencies:
--- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE 
---               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE 
+-- License:      https://github.com/a2n-s/dotfiles/blob/main/LICENSE
+--               original license at https://github.com/LunarVim/Neovim-from-scratch/blob/master/LICENSE
 -- Contributors: Stevan Antoine
---               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch 
+--               adapted from the work of Christian Chiarulli at https://github.com/LunarVim/Neovim-from-scratch
 
--- local notify_ok, notify = pcall(require, "notify")
--- local plugin            = ""
--- local error_timeout     = 5000
--- local err_opts          = { title=plugin, timeout=error_timeout }
---
---   local err_msg = 
---   if not notify_ok then vim.notify(err_msg) else notify(err_msg, "error", err_opts) end
--- -- local notify_ok, notify = pcall(require, "notify")
--- local plugin            = "kyazdani42/nvim-tree.lua"
--- local error_timeout     = 5000
--- local success_timeout   = 500
---
--- local status_ok, nvim_tree = pcall(require, "nvim-tree")
--- if not status_ok then
---   if not notify_ok then vim.notify("Could not load properly 'nvim-tree' inside 'nvim-tree.lua'")
---   else                      notify("This is an error message.\nSomething went wrong!", "error", { title = plugin, timeout = error_timeout })  end
---   return
--- else
---   if not notify_ok then vim.notify("'nvim-tree' properly loaded inside 'nvim-tree.lua'")
---   else                      notify("This is not an error message.\nNothing went wrong!", "info", { title = plugin, timeout = success_timeout }) end
--- end
--- local colorscheme = "monokai_soda"
--- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
--- if not status_ok then
---   vim.notify("colorscheme " .. colorscheme .. " not found!")
---   return
--- end
---
--- if not status_ok then
---   local notify_ok, notify = pcall(require, "notify")
---   if not notify_ok then
---     vim.notify("Could not load properly 'cheatsheet' inside 'cheatsheet.lua'")
---   else
---     local plugin = "sudormrfbin/cheatsheet.nvim"
---     notify("This is an error message.\nSomething went wrong!", "error", { title = plugin })
---   end
---   return
--- end
-vim.cmd [[
-try
-  colorscheme monokai_soda
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
+local colorscheme = "darkplus"
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+	vim.notify("Could not load properly '" .. colorscheme .. "' inside 'colorscheme.lua'", "error", { title = colorscheme })
+  vim.cmd([[colorscheme default]])
+  vim.cmd([[set background=dark]])
+	return
+end
