@@ -32,6 +32,7 @@ require "user.gitsigns"         -- https://github.com/lewis6991/gitsigns.nvim
 require "user.nvim-tree"        -- https://github.com/kyazdani42/nvim-tree.lua
 require "user.bufferline"       -- https://github.com/akinsho/bufferline.nvim
 require "user.lualine"          -- https://github.com/nvim-lualine/lualine.nvim
+-- require "user.staline"          -- https://github.com/tamton-aquib/staline.nvim
 require "user.toggleterm"       -- https://github.com/akinsho/toggleterm.nvim
 require "user.project"          -- https://github.com/ahmedkhalf/project.nvim
 require "user.impatient"        -- https://github.com/lewis6991/impatient.nvim

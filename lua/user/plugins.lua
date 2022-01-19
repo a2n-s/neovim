@@ -357,7 +357,7 @@ return packer.startup(function(use)
   -- use "ojroques/nvim-hardline"                      -- https://github.com/ojroques/nvim-hardline                      | A statusline / bufferline. It is inspired by <a href="https://github.com/vim-airline/vim-airline">vim-airline</a> but aims to be as light and simple as possible.
   -- use "datwaft/bubbly.nvim"                         -- https://github.com/datwaft/bubbly.nvim                         | Bubbly status line for Neovim.
   -- use "beauwilliams/statusline.lua"                 -- https://github.com/beauwilliams/statusline.lua                 | A zero-config minimal statusline for Neovim written in Lua featuring awesome integrations and blazing speed!
-  -- use "tamton-aquib/staline.nvim"                   -- https://github.com/tamton-aquib/staline.nvim                   | A modern lightweight statusline for Neovim in Lua. Mainly uses unicode symbols for showing info.
+     use "tamton-aquib/staline.nvim"                   -- https://github.com/tamton-aquib/staline.nvim                   | A modern lightweight statusline for Neovim in Lua. Mainly uses unicode symbols for showing info.
   -- use "Famiu/feline.nvim"                           -- https://github.com/Famiu/feline.nvim                           | A minimal, stylish and customizable statusline for Neovim written in Lua.
   -- use "windwp/windline.nvim"                        -- https://github.com/windwp/windline.nvim                        | The next generation statusline for Neovim. Animation statusline.
   -- use "konapun/vacuumline.nvim"                     -- https://github.com/konapun/vacuumline.nvim                     | A galaxyline configuration inspired by airline.
@@ -557,7 +557,7 @@ return packer.startup(function(use)
      use "lewis6991/impatient.nvim"                    -- https://github.com/lewis6991/impatient.nvim                    |
      -- use "ahmedkhalf/jupyter-nvim"                     -- https://github.com/ahmedkhalf/jupyter-nvim                     |
      -- use "bfredl/nvim-ipy"                             -- https://github.com/bfredl/nvim-ipy                             |
-     use { 'dccsillag/magma-nvim',
+     use { 'dccsillag/magma-nvim',                     -- https://github.com/dccsillag/magma-nvim                        |
             run = ':UpdateRemotePlugins' }
 
   -- Automatically set up your configuration after cloning packer.nvim
