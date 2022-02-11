@@ -231,7 +231,7 @@ return packer.startup(function(use)
      use "lunarvim/darkplus.nvim"                      -- https://github.com/lunarvim/darkplus.nvim                      | the darkplus theme from lunarvim
 -- Tree-sitter Supported Colorscheme
   -- use "shaeinst/roshnivim-cs"                       -- https://github.com/shaeinst/roshnivim-cs                       | Colorscheme for Neovim written in Lua, specially made for roshnivim with Tree-sitter support.
-  -- use "rafamadriz/neon"                             -- https://github.com/rafamadriz/neon                             | Customizable colorscheme with excellent italic and bold support, dark and light variants. Made to work and look good with Tree-sitter.
+     use "rafamadriz/neon"                             -- https://github.com/rafamadriz/neon                             | Customizable colorscheme with excellent italic and bold support, dark and light variants. Made to work and look good with Tree-sitter.
   -- use "tomasiser/vim-code-dark"                     -- https://github.com/tomasiser/vim-code-dark                     | A dark color scheme heavily inspired by the look of the Dark+ scheme of Visual Studio Code.
   -- use "Mofiqul/vscode.nvim"                         -- https://github.com/Mofiqul/vscode.nvim                         | A Lua port of vim-code-dark colorscheme for Neovim with vscode light and dark theme.
   -- use "marko-cerovac/material.nvim"                 -- https://github.com/marko-cerovac/material.nvim                 | Material.nvim is a highly configurable colorscheme written in Lua and based on the material palette.

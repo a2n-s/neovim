@@ -68,7 +68,6 @@ function _TIG_TOGGLE()  tig:toggle() end
 local cfg_lazygit = Terminal:new({ cmd = "lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME", hidden = true, direction = "float" })
 function _CFG_LAZYGIT_TOGGLE()  cfg_lazygit:toggle() end
 
--- local cfg_tig = Terminal:new({ cmd = "GIT_DIR=$HOME/.dotfiles tig -C $HOME/.dotfiles --all", hidden = true, direction = "float" })
 local cfg_tig = Terminal:new({ cmd = "GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME tig --all", hidden = true, direction = "float" })
 function _CFG_TIG_TOGGLE()  cfg_tig:toggle() end
 

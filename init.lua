@@ -45,4 +45,4 @@ require "user.venn"             -- https://github.com/jbyuki/venn.nvim
 require "user.cheatsheet"       -- https://github.com/sudormrfbin/cheatsheet.nvim
 -- require "user.jupyter"          -- https://github.com/ahmedkhalf/jupyter-nvim
 
-require "user.notify.greetings"
+-- require "user.notify.greetings"
