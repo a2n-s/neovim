@@ -107,7 +107,7 @@ nvim_tree.setup {
     mappings = {
       custom_only = false,
       list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+        { key = { "l", "<CR>", "o" },           cb = tree_cb "edit" },
         { key = {"<2-RightMouse>", "<C-]>"},    cb = tree_cb("cd") },
         { key = {"<C-v>", "v"},                 cb = tree_cb("vsplit") },
         { key = {"<C-x>", "s"},                 cb = tree_cb("split") },

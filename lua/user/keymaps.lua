@@ -83,7 +83,7 @@ local mappings = {
       ["<A-k>"] = ":move '<-2<CR>gv-gv",
   },
   terminal = {
-      ["<Esc>"] = "<Nop>",  -- disable the escape key in terminal mode as it conflicts with features from terminal apps.
+      -- ["<Esc>"] = "<Nop>",  -- disable the escape key in terminal mode as it conflicts with features from terminal apps.
   },
 }
 
