@@ -138,6 +138,7 @@ nvim_tree.setup {
         { key = "-",                            cb = tree_cb("dir_up") },
         { key = "S",                            cb = tree_cb("system_open") },
         { key = "q",                            cb = tree_cb("close") },
+        { key = "<Esc>",                        cb = tree_cb("close") },
         { key = "?",                            cb = tree_cb("toggle_help") },
       },
     },

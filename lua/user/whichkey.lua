@@ -101,10 +101,6 @@ local opts = {
 -- see https://github.com/folke/which-key.nvim#%EF%B8%8F-mappings
 local mappings = {
   ["a"]   = { "<cmd>Alpha<cr>",                                                           "Alpha"                         },
-  -- ["w"]   = { "<cmd>w!<CR>",                                                               "Save"                         },
-  -- ["q"]   = { "<cmd>q<CR>",                                                                "Quit"                         },
-  -- ["W"]   = { "<cmd>wa!<CR>",                                                          "Save All"                         },
-  -- ["Q"]   = { "<cmd>qa<CR>",                                                           "Quit All"                         },
   ["h"]   = { "<cmd>nohlsearch<CR>",                                               "No Highlight"                         },
   ["S"]   = { "<cmd>luafile $MYVIMRC<cr>:luafile %<cr>",                      "Source the config"                         },
   ["/"]   = { "<cmd>Telescope live_grep theme=ivy<cr>",                               "Find Text"                         },
@@ -197,8 +193,8 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>",                                                              "Update"                  },
                                                                                                                           },
   q = { name =                                                                           "quit",
-    q = { "<cmd>wqa!<CR>",                                                                  "quit"                        },
-    Q = { "<cmd>qa!<CR>",                                                                   "quit without saving"         },
+    q = { "<cmd>qa<CR>",                                                                   "quit"                         },
+    Q = { "<cmd>qa!<CR>",                                                                  "quit without saving"          },
                                                                                                                           },
   s = { name =                                                                         "Search",
     b = { "<cmd>Telescope git_branches<cr>",                                                    "Checkout branch"         },
