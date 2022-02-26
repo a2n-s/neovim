@@ -19,7 +19,7 @@
 -- options definition.
 local options = {
   foldmethod     = "marker",
-  shell          = "fish",
+  shell          = "bash",
   -- visual options to make basic things look pretty.
   showcmd        = true,                      -- show partial commands in the command lines when typing key strokes.
   cmdheight      = 1,                         -- more space in the neovim command line for displaying messages.
