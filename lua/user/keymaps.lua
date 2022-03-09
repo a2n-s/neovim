@@ -54,6 +54,7 @@ local mappings = {
       ["<C-j>"]     = "<C-w>j",
       ["<C-k>"]     = "<C-w>k",
       ["<C-l>"]     = "<C-w>l",
+      ["<C-m>"]     = "<C-d>",
       ["o"]         = "o<Esc>",                              -- below.-- do not go into insert more when creating line above or below.
       ["O"]         = "O<Esc>",                              -- above.
       -- ["<leader>s"] = ":luafile $MYVIMRC<CR>:luafile %<CR>", -- sources the config.
