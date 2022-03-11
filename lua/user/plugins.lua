@@ -258,7 +258,7 @@ return packer.startup(function(use)
   -- use "ray-x/aurora"                                -- https://github.com/ray-x/aurora                                | A 24-bit dark theme with Tree-sitter and LSP support.
   -- use "novakne/kosmikoa.nvim"                       -- https://github.com/novakne/kosmikoa.nvim                       | Colorscheme for Neovim.
      use "tanvirtin/monokai.nvim"                      -- https://github.com/tanvirtin/monokai.nvim                      | Monokai theme for Neovim written in Lua.
-  -- use "nekonako/xresources-nvim"                    -- https://github.com/nekonako/xresources-nvim                    | Neovim colorscheme based on your xresources color.
+     use "nekonako/xresources-nvim"                    -- https://github.com/nekonako/xresources-nvim                    | Neovim colorscheme based on your xresources color.
   -- use "savq/melange"                                -- https://github.com/savq/melange                                | Dark color scheme for Neovim and Vim <g-emoji class="g-emoji" alias="dagger" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f5e1.png"><img class="emoji" alt="dagger" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f5e1.png"></g-emoji>.
   -- use "RRethy/nvim-base16"                          -- https://github.com/RRethy/nvim-base16                          | Neovim plugin for building base16 colorschemes. Includes support for Treesitter and LSP highlight groups.
   -- use "fenetikm/falcon"                             -- https://github.com/fenetikm/falcon                             | A colour scheme for terminals, Vim and friends.
