@@ -215,7 +215,7 @@ return packer.startup(function(use)
      use "jbyuki/venn.nvim"                            -- https://github.com/jbyuki/venn.nvim                            | Draw ASCII diagrams in Neovim.
   -- use "stevearc/gkeep.nvim"                         -- https://github.com/stevearc/gkeep.nvim                         | Google Keep integration for Neovim.
 -- Color
-  -- use "norcalli/nvim-colorizer.lua"                 -- https://github.com/norcalli/nvim-colorizer.lua                 | A high-performance color highlighter for Neovim which has no external dependencies!.
+     use "norcalli/nvim-colorizer.lua"                 -- https://github.com/norcalli/nvim-colorizer.lua                 | A high-performance color highlighter for Neovim which has no external dependencies!.
   -- use "sunjon/Shade.nvim"                           -- https://github.com/sunjon/Shade.nvim                           | Shade is a Neovim plugin that dims your inactive windows, making it easier to see the active window at a glance.
   -- use "winston0410/range-highlight.nvim"            -- https://github.com/winston0410/range-highlight.nvim            | An extremely lightweight plugin (~ 120loc) that highlights ranges you have entered in commandline.
      use "xiyaowong/nvim-transparent"                  -- https://github.com/xiyaowong/nvim-transparent                  | Make your Neovim transparent.

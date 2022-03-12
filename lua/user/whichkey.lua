@@ -218,6 +218,14 @@ local mappings = {
     c = { "<cmd>q!<CR>",                                                                        "Close"                   },
     s = { "<cmd>sp<CR>",                                                                        "Split"                   },
     v = { "<cmd>vsp<CR>",                                                                       "Vertical split"          },
+    h = { "<C-w>h<CR>",                                                                         "Switch to left split"    },
+    j = { "<C-w>j<CR>",                                                                         "Switch to bottom split"  },
+    k = { "<C-w>k<CR>",                                                                         "Switch to top split"     },
+    l = { "<C-w>l<CR>",                                                                         "Switch to right split"   },
+    H = { ":vertical resize -2<CR>",                                                            "Vertical shrink"         },
+    J = { ":resize +2<CR>",                                                                     "Horizontal grow"         },
+    K = { ":resize -2<CR>",                                                                     "Horizontal shrink"       },
+    L = { ":vertical resize +2<CR>",                                                            "Vertical grow"           },
                                                                                                                           },
 }
 
